@@ -1,0 +1,22 @@
+{
+  "name": "astro-next-app",
+  "version": "1.0.0",
+  "description": "Combined Astro and Next.js application",
+  "scripts": {
+    "dev:astro": "cd src/astro && npx astro dev",
+    "dev:next": "cd src/next && npx next dev",
+    "build:astro": "cd src/astro && npx astro build",
+    "build:next": "cd src/next && npx next build",
+    "build": "npm run build:astro && npm run build:next",
+    "dev": "concurrently \"npm run dev:astro\" \"npm run dev:next\" \"node dev-server.js\"",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^2.0.6",
+    "next": "^14.2.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
