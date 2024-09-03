@@ -1,1 +1,3 @@
 node_modules
+
+./src/next/node_modules
