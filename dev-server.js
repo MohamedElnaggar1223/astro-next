@@ -16,7 +16,7 @@ app.use('/', createProxyMiddleware({
   changeOrigin: true,
 }));
 
-const PORT = 8080;
+const PORT = 80;
 app.listen(PORT, () => {
   console.log(`Dev server running on http://localhost:${PORT}`);
 });
